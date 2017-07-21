@@ -1,12 +1,12 @@
 # sbb
 
-CLI Timetable queries
+CLI Timetable queries to the [opendata Transport API](https://transport.opendata.ch/)
 
 ## Installation
 
     go install github.com/mhutter/sbb/...
 
-## usage
+## Usage
 
     $ sbb from Zurich to Brig
     ---------------------------------------------------------
@@ -22,3 +22,13 @@ CLI Timetable queries
     Zürich HB                      dep: 08:02     dur: 02:09
     Brig                           arr: 10:11
     ---------------------------------------------------------
+
+
+[![CircleCI](https://circleci.com/gh/mhutter/sbb.svg?style=svg)](https://circleci.com/gh/mhutter/sbb)
+[![codecov](https://codecov.io/gh/mhutter/sbb/branch/master/graph/badge.svg)](https://codecov.io/gh/mhutter/sbb)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mhutter/sbb)](https://goreportcard.com/report/github.com/mhutter/sbb)
+
+---
+> by [@mhutter](https://github.com/mhutter)
+> λ [hutter.io](https://hutter.io/)
+> λ twitter: [@Dratir](https://twitter.com/Dratir)
