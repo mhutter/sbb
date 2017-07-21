@@ -1,0 +1,36 @@
+# Golang CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-go/ for more details
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version
+      - image: circleci/golang:1.8
+
+    working_directory: /go/src/github.com/mhutter/sbb
+
+    environment:
+      TEST_RESULTS: /tmp/test-results
+
+    steps:
+      - checkout
+      - run:
+          name: Install & prepare go-junit-report
+          command: |
+            go get github.com/jstemmer/go-junit-report
+            mkdir -p $TEST_RESULTS
+      - run:
+          name: Run unit tests
+          command: |
+            trap "go-junit-report \
+              < ${TEST_RESULTS}/go-test.out \
+              > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            go test -v -race \
+              -coverprofile=coverage.txt -covermode=atomic \
+              | tee ${TEST_RESULTS}/go-test.out
+      - run:
+          name: Upload coverage data
+          command: bash <(curl -s https://codecov.io/bash)
+      - store_test_results:
+          path: /tmp/test-results
