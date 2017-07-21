@@ -14,9 +14,13 @@ type Response struct {
 // FetchConnections queries the OpenTransport API
 func FetchConnections(q *Query) (res *Response) {
 	rawResponse, err := http.Get(q.URL())
-	check(err)
+	if err != nil {
+		panic(err)
+	}
 	body, err := ioutil.ReadAll(rawResponse.Body)
-	check(err)
+	if err != nil {
+		panic(err)
+	}
 	json.Unmarshal(body, &res)
 
 	return res

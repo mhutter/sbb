@@ -49,14 +49,18 @@ func (c *Connection) DisplayTo() string {
 // DisplayDeparture returns the formatted starting Location
 func (c *Connection) DisplayDeparture() string {
 	departure, err := time.Parse(timeFormat, c.From.Departure)
-	check(err)
+	if err != nil {
+		panic(err)
+	}
 	return departure.Format("15:04")
 }
 
 // DisplayArrival returns the formatted starting Location
 func (c *Connection) DisplayArrival() string {
 	arrival, err := time.Parse(timeFormat, c.To.Arrival)
-	check(err)
+	if err != nil {
+		panic(err)
+	}
 	return arrival.Format("15:04")
 }
 
