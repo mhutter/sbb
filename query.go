@@ -8,7 +8,7 @@ import (
 
 // Information about the OpenTransport API
 const (
-	APIBase = "https://transport-beta.opendata.ch/v1/connections"
+	APIBase = "https://transport.opendata.ch/v1/connections"
 )
 
 var wordTranslations = map[string][]string{
