@@ -34,3 +34,23 @@ jobs:
           command: bash <(curl -s https://codecov.io/bash)
       - store_test_results:
           path: /tmp/test-results
+
+  release:
+    docker:
+      - image: circleci/golang:1.12
+    steps:
+      - checkout
+      - run:
+          name: Release
+          command: curl -sSL https://git.go/goreleaser | bash
+
+workflows:
+  version: 2
+  release:
+    jobs:
+      - release:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v[0-9]+\..*/

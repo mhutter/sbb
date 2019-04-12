@@ -1,0 +1,37 @@
+---
+builds:
+  - main: ./cmd/sbb
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+archive:
+  replacements:
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+    386: i386
+    amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+    - Merge pull request
+    - Merge branch
+brew:
+  github:
+    owner: mhutter
+    name: homebrew-tap
+  folder: Formula
+  homepage: 'https://github.com/mhutter/sbb'
+  description: Check the SBB timetable from the CLI
+  test: |
+    system "#{bin}/sbb"
