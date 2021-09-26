@@ -13,6 +13,6 @@ func PrintConnectionList(connections []Connection) {
 
 // Print prints out a single Connection
 func (c *Connection) Print() {
-	fmt.Printf("%-25s dep: %s  plat: %s  dur: %s\n", c.DisplayFrom(), c.DisplayDeparture(), c.From.Platform, c.DisplayDuration())
-	fmt.Printf("%-25s arr: %s\n", c.DisplayTo(), c.DisplayArrival())
+	fmt.Printf("%-22s dep: %s  plat: %s  dur: %s\n", c.DisplayFrom(), c.DisplayDeparture(), c.From.Platform, c.DisplayDuration())
+	fmt.Printf("%-22s arr: %s\n", c.DisplayTo(), c.DisplayArrival())
 }
