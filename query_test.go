@@ -39,6 +39,10 @@ var testCases = []struct {
 		input: "from Brig to Horn on 2017/01/02",
 		conn:  &Query{From: "Brig", To: "Horn", Date: "2017-01-02"},
 	},
+	{
+		input: "from Brig to Horn at 3:42",
+		conn:  &Query{From: "Brig", To: "Horn", Time: "3:42"},
+	},
 }
 
 func TestParseQuery(t *testing.T) {
