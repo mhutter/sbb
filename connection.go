@@ -11,6 +11,7 @@ const timeFormat = "2006-01-02T15:04:05-0700"
 var RequiredFields = []string{
 	"connections/from/station/name",
 	"connections/from/departure",
+	"connections/from/platform",
 	"connections/to/station/name",
 	"connections/to/arrival",
 	"connections/duration",
@@ -29,6 +30,7 @@ type Checkpoint struct {
 	Station   Location
 	Departure string
 	Arrival   string
+	Platform  string
 }
 
 // Location represents a Checkpoint on a Connection
