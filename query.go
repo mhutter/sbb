@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information about the OpenTransport API
+// APIBase Information about the OpenTransport API
 const (
 	APIBase = "https://transport.opendata.ch/v1/connections"
 )
