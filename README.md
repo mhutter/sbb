@@ -4,7 +4,17 @@ CLI Timetable queries to the [opendata Transport API](https://transport.opendata
 
 ## Installation
 
+### Homebrew
+
+    brew install mhutter/tap/sbb
+
+### `go install`
+
     go install github.com/mhutter/sbb/...
+
+### Manual installation
+
+You can always download the latest binaries from the [releases page](https://github.com/mhutter/sbb/releases/latest).
 
 ## Usage
 
