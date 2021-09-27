@@ -28,8 +28,8 @@ CLI Timetable queries to the [opendata Transport API](https://transport.opendata
 | ------ | ----------- |
 | from   | Specifies the departure location of the connection |
 | to     | Specifies the arrival location of the connection |
-| date   | Date of the connection |
-| time   | Time of the connection |
+| on     | Date of the connection |
+| at     | Time of the connection |
 
 
 [![CircleCI](https://circleci.com/gh/mhutter/sbb.svg?style=svg)](https://circleci.com/gh/mhutter/sbb)
