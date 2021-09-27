@@ -23,7 +23,8 @@ CLI Timetable queries to the [opendata Transport API](https://transport.opendata
     Brig                           arr: 10:11
     ---------------------------------------------------------
 
-### Options
+### Keywords
+
 | Option | Description |
 | ------ | ----------- |
 | from   | Specifies the departure location of the connection |
@@ -31,10 +32,6 @@ CLI Timetable queries to the [opendata Transport API](https://transport.opendata
 | date   | Date of the connection |
 | time   | Time of the connection |
 
-
-[![CircleCI](https://circleci.com/gh/mhutter/sbb.svg?style=svg)](https://circleci.com/gh/mhutter/sbb)
-[![codecov](https://codecov.io/gh/mhutter/sbb/branch/master/graph/badge.svg)](https://codecov.io/gh/mhutter/sbb)
-[![Go Report Card](https://goreportcard.com/badge/github.com/mhutter/sbb)](https://goreportcard.com/report/github.com/mhutter/sbb)
 
 ---
 > by [@mhutter](https://github.com/mhutter)
