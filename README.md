@@ -20,17 +20,17 @@ You can always download the latest binaries from the [releases page](https://git
 
     $ sbb from Zurich to Brig
     ---------------------------------------------------------
-    Zürich HB                      dep: 06:02     dur: 02:09
-    Brig                           arr: 08:11
+    Zürich HB              dep: 18:02  plat: 31  dur: 02:09
+    Brig                   arr: 20:11
     ---------------------------------------------------------
-    Zürich HB                      dep: 06:32     dur: 02:08
-    Brig                           arr: 08:40
+    Zürich HB              dep: 19:02  plat: 31  dur: 02:08
+    Brig                   arr: 21:11
     ---------------------------------------------------------
-    Zürich HB                      dep: 07:02     dur: 02:09
-    Brig                           arr: 09:11
+    Zürich HB              dep: 19:32  plat: 32  dur: 02:09
+    Brig                   arr: 21:41
     ---------------------------------------------------------
-    Zürich HB                      dep: 08:02     dur: 02:09
-    Brig                           arr: 10:11
+    Zürich HB              dep: 20:32  plat: 32  dur: 02:09
+    Brig                   arr: 22:41
     ---------------------------------------------------------
 
 ### Keywords
@@ -39,8 +39,8 @@ You can always download the latest binaries from the [releases page](https://git
 | ------ | ----------- |
 | from   | Specifies the departure location of the connection |
 | to     | Specifies the arrival location of the connection |
-| date   | Date of the connection |
-| time   | Time of the connection |
+| on     | Date of the connection |
+| at     | Time of the connection |
 
 
 ---
